@@ -1,0 +1,46 @@
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5em;
+
+    @include desktop {
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+}
+
+.header{
+    padding: 0 30px;
+
+    @include desktop {width: 55%;}
+    
+    h1{
+        margin: auto;
+
+        font-size: 2.1rem;
+        text-align: center;
+        line-height: 0.9;
+
+        color: $text-color-dark-magenta;
+
+        @include desktop {
+            font-size: 3rem;
+            text-align: left;
+        }
+    }
+
+    p{
+        margin: 1em 0;
+
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
+
+        color: $dark-magenta;
+
+        @include desktop {
+            text-align: left;
+        }
+    }
+}

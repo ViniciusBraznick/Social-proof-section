@@ -1,0 +1,22 @@
+// Colors
+$white: hsl(0, 0%, 100%);
+$pink: hsl(333, 80%, 67%);
+$dark-magenta: hsl(303, 10%, 53%);
+$background-rating-box:  hsl(300, 24%, 96%);
+$text-color-dark-magenta: hsl(300, 43%, 22%);
+
+// Width screen
+$desktop-width: 1024px;
+$desktop-large-width: 1440px;
+
+@mixin  desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content
+    }
+};
+
+@mixin desktop-large {
+    @media (min-width: #{$desktop-large-width}) {
+        @content
+    }
+};

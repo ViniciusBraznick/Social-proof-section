@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+body{
+    font-size: 15px; height: 100%;
+    font-family: 'Spartan', sans-serif;
+
+    background: url("/images/bg-pattern-top-mobile.svg")no-repeat left, url("/images/bg-pattern-bottom-mobile.svg") no-repeat right;
+    background-position-y: 0, 300px;
+    background-position-x: 0, 0px;
+
+    @include desktop {
+        background: url("/images/bg-pattern-top-desktop.svg")no-repeat , url("/images/bg-pattern-bottom-desktop.svg") no-repeat ;
+        background-position-y: 0, 100px;
+        background-position-x: 0, 100%;
+    }
+}
+
+section{
+    width: 80%; min-width: 370px;
+
+    margin: 3em auto;
+
+    @include desktop {
+        width: 90%;
+        margin: 5em auto;
+    }
+
+    @include desktop-large {
+        width: 70%;
+        margin: 5em auto;
+    }
+}

@@ -1,0 +1,48 @@
+.rating-box{
+    width: 100%;
+    margin-bottom: 2em;
+    margin: 0 auto;
+
+    @include desktop { width: 60%;}
+
+    .rating-box-card{
+        width: auto; height: 72px;
+        max-width: 380px;
+        margin: 1em auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 5px;
+        background-color: hsla(304, 29%, 70%, 0.507);
+
+        @include desktop {  
+            height: 45px;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        span{
+            font-weight: bolder;
+            color: $text-color-dark-magenta;
+
+            @include desktop {  
+                font-size: .8rem;
+                font-weight: bold;
+            }
+        }
+    }
+
+    @include desktop {  
+        $i: 1;
+        $counter-margin: 50;
+            @for $i from 1 through 3 {
+                .rating-card-#{$i}{
+                    margin-right: #{$counter-margin}px;
+                } 
+                $counter-margin: $counter-margin - 25;
+            }
+    }
+}
